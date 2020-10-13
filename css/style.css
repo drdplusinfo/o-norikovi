@@ -3,10 +3,15 @@ body {
     font-family: "Times New Roman", serif;
 }
 
-.calibre {
+.main {
     max-width: 487px;
-    display: block;
+    min-height: 459px;
     margin: auto;
+    position: relative;
+    padding: 1em;
+}
+
+.calibre {
     font-size: 24px;
 }
 

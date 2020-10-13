@@ -1,0 +1,7 @@
+.background-image {
+    background-size: auto;
+    position: absolute;
+    opacity: 5%;
+    filter: grayscale(100);
+    background-repeat: repeat-y;
+}
