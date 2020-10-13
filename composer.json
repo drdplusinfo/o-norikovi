@@ -1,0 +1,38 @@
+{
+  "name": "drdplusinfo/o-norikovi",
+  "license": "proprietary",
+  "type": "project",
+  "description": "O Norikovi, jeho rodičích a bratrech, o loupežnících a o vlkovi, o barvách a tvarech štěstí, o prostém dřevorubci Prouzovi, o moudrém druidovi Dudlibolovi, o hovnu u cesty a mrtvém staříkovi tamtéž...",
+  "keywords": [
+    "O NOrikovi",
+    "gamebook",
+    "Vláďa",
+    "Vladimír",
+    "Vlaada",
+    "Chvátil"
+  ],
+  "autoload": {
+    "psr-4": {
+      "DrdPlus\\": "DrdPlus/"
+    }
+  },
+  "require": {
+    "php": ">=7.1",
+    "drdplus/rules-skeleton": "^3.0"
+  },
+  "require-dev": {
+    "composer/composer": "^1.10",
+    "granam/exceptions-hierarchy": "^5.0",
+    "mockery/mockery": "^1.4",
+    "phpunit/phpunit": "^9.0",
+    "roave/security-advisories": "dev-master"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "scripts": {
+    "pre-autoload-dump": [
+      "mkdir -p DrdPlus/Tests && rm -f DrdPlus/Tests/RulesSkeleton && cd DrdPlus/Tests && ln -s ../../vendor/drdplus/rules-skeleton/DrdPlus/Tests/RulesSkeleton"
+    ]
+  }
+}
