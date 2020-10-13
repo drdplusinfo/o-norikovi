@@ -3,3 +3,9 @@
     font-size: 30px;
     margin-top: 5em;
 }
+
+.pokračovat {
+    font-size: smaller;
+    margin-top: 1em;
+    font-style: italic;
+}
