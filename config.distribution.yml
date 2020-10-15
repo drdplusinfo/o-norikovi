@@ -10,6 +10,6 @@ web:
     show_home_button_on_routes: false
     home_button_target: 'https://www.drdplus.info'
 google:
-  analytics_id: ' UA-121206931-22'
+  analytics_id: 'UA-121206931-22'
 application:
   yaml_file_with_routes: 'routes.yml'
