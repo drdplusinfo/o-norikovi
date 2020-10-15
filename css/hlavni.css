@@ -9,3 +9,11 @@ body {
     position: relative;
     padding: 1em;
 }
+
+.o-norikovi p:first-child {
+    text-indent: 0
+}
+
+.číslo-stránky {
+    font-weight: bold;
+}
