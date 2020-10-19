@@ -13,6 +13,11 @@ $expectedNonDigitSectionHrefs = ['../konec'];
 $expectedNonDigitSectionNames = ['KONEC'];
 $autoriBaseName = basename(__DIR__ . '/../web/autori/autoři.html');
 
+$folders = scandir(__DIR__ . '/../web', SCANDIR_SORT_ASCENDING);
+$dirs = array_filter($folders, static function (string $folder) {
+    return !preg_match('~([.]html|^[.]{1,2})$~', $folder);
+});
+
 $htmlFiles = glob(__DIR__ . '/../web/*/*.html', GLOB_NOSORT | GLOB_MARK);
 foreach ($htmlFiles ?: [] as $htmlFile) {
     if (!is_file($htmlFile)) {
@@ -36,6 +41,9 @@ HTML
     $anchors = $originalDocument->getElementsByTagName('a');
     foreach ($anchors as $anchor) {
         $href = (string)$anchor->getAttribute('href');
+        if (!in_array(basename($href), $dirs, true)) {
+            trigger_error(sprintf("Href '%s' from file '%s' is pointing to unknown dir", $href, $baseName), E_USER_ERROR);
+        }
         if (!preg_match('~^[.]{2}/\d+$~', $href) && !in_array($href, $expectedNonDigitSectionHrefs, true)) {
             trigger_error(sprintf("Strange href, expected something like '../123', got '%s'", $href), E_USER_ERROR);
         }
