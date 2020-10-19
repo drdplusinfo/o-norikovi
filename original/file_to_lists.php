@@ -8,9 +8,9 @@ if ((!empty($_SERVER['REMOTE_ADDR']) && $_SERVER['REMOTE_ADDR'] === '127.0.0.1')
 $documentRoot = $documentRoot ?? (PHP_SAPI !== 'cli' ? \rtrim(\dirname($_SERVER['SCRIPT_FILENAME']), '\/') : \getcwd());
 
 /** @noinspection PhpIncludeInspection */
-require_once $documentRoot . '/vendor/autoload.php';
+require_once $documentRoot . '/../vendor/autoload.php';
 
-$originalContent = file_get_contents(__DIR__ . '/web/original/index.html');
+$originalContent = file_get_contents(__DIR__ . '/index.html');
 preg_match_all('~"calibre_link-(?<index>\d+)"~', $originalContent, $matches);
 $maxIndex = (int)max($matches['index']);
 $originalDocument = new \Granam\WebContentBuilder\HtmlDocument($originalContent);
