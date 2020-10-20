@@ -69,10 +69,20 @@ HTML
 $autoriDirBaseName = basename(__DIR__ . '/../web/autori');
 $zacatekDirBaseName = basename(__DIR__ . '/../web/zacatek');
 $konecDirBaseName = basename(__DIR__ . '/../web/konec');
+$travelingNumbers = ['329', '404', '500', '533', '651', '771', '812', '862', '876', '911', '952', '1004', '1011', '1021', '1029'];
+$strangeNumbers = ['336', '617', '712', '848', '908', '959', '1026'];
 
 $dirsFromHrefs = array_map('basename', array_keys($hrefsToSectionNumbers));
 
-$unusedDirs = array_diff($dirs, $dirsFromHrefs, [$autoriDirBaseName, $zacatekDirBaseName, $konecDirBaseName]);
+$unusedDirs = array_diff(
+    $dirs,
+    $dirsFromHrefs,
+    array_merge(
+        [$autoriDirBaseName, $zacatekDirBaseName, $konecDirBaseName],
+        $travelingNumbers,
+        $strangeNumbers
+    )
+);
 
 if ($unusedDirs) {
     sort($unusedDirs);
