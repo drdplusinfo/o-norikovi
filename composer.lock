@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drdplusinfo/rules-skeleton.git",
-                "reference": "be87d6c82bf112926661dcd7331069d6f2bf8ef6"
+                "reference": "e1e7ab5bec75d259568fd7376e6e429cbb2f3f95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drdplusinfo/rules-skeleton/zipball/be87d6c82bf112926661dcd7331069d6f2bf8ef6",
-                "reference": "be87d6c82bf112926661dcd7331069d6f2bf8ef6",
+                "url": "https://api.github.com/repos/drdplusinfo/rules-skeleton/zipball/e1e7ab5bec75d259568fd7376e6e429cbb2f3f95",
+                "reference": "e1e7ab5bec75d259568fd7376e6e429cbb2f3f95",
                 "shasum": ""
             },
             "require": {
@@ -73,7 +73,7 @@
                 "helper",
                 "rules"
             ],
-            "time": "2020-10-20T01:52:40+00:00"
+            "time": "2020-10-20T11:25:58+00:00"
         },
         {
             "name": "drdplus/web-versions",

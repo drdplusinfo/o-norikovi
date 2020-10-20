@@ -4,3 +4,7 @@
     filter: grayscale(100);
     background: repeat-y url(/images/main-background.jpg?version=cdef84ba34f9890965c0d808e8bbbdbc);
 }
+
+.root-path-route .main .background-image {
+    background: none;
+}

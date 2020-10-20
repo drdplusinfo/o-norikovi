@@ -1,3 +1,7 @@
+.root-path-route .main {
+    padding: 0; /* aby mela obalka co nejvic prostoru */
+}
+
 .obálka {
     display: block;
     margin-left: auto;
