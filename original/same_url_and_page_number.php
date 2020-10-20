@@ -19,11 +19,13 @@ $dirs = array_filter($folders, static function (string $folder) {
     return !preg_match('~([.]html|^[.]{1,2})$~', $folder);
 });
 
-$htmlFiles = glob(__DIR__ . '/../web/*/*.html', GLOB_NOSORT | GLOB_MARK);
-foreach ($htmlFiles ?: [] as $htmlFile) {
-    if (!is_file($htmlFile)) {
-        continue;
+$htmlFiles = array_filter(
+    glob(__DIR__ . '/../web/*/*.html', GLOB_NOSORT | GLOB_MARK) ?: [],
+    function (string $filename) {
+        return is_file($filename);
     }
+);
+foreach ($htmlFiles as $htmlFile) {
     $htmlFileBaseName = basename($htmlFile);
     if ($htmlFileBaseName === $autoriHtmlFileBaseName) { // TODO a co konec?
         continue;
@@ -91,4 +93,34 @@ if ($unusedDirs) {
 
 if ($errors) {
     trigger_error(implode("\n", $errors), E_USER_ERROR);
+}
+
+foreach ($htmlFiles as $htmlFile) {
+    ob_start();
+    include $htmlFile;
+    $originalContent = ob_get_clean();
+    $originalDocument = new \Granam\WebContentBuilder\HtmlDocument(
+        <<<HTML
+<!DOCTYPE html>
+<html lang="cs">
+<body>
+$originalContent
+</body>
+</html>
+HTML
+    );
+    $anchors = $originalDocument->getElementsByTagName('a');
+    foreach ($anchors as $anchor) {
+        $href = (string)$anchor->getAttribute('href');
+        if (!empty($hrefsToSectionNumbers[$href])) {
+            $sectionNumber = $hrefsToSectionNumbers[$href];
+            $anchor->setAttribute('href', preg_replace('~\d+~', '_' . $sectionNumber, $href));
+        }
+    }
+    file_put_contents($htmlFile, $originalDocument->body->innerHTML);
+}
+foreach ($hrefsToSectionNumbers as $href => $sectionNumber) {
+    $oldDirName = __DIR__ . '/../web/' . basename($href);
+    $newDirName = __DIR__ . '/../web/_' . $sectionNumber;
+    rename($oldDirName, $newDirName);
 }
