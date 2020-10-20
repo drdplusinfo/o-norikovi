@@ -9,8 +9,17 @@ body {
     margin: auto;
     position: relative;
     padding: 1em;
+    text-align: justify;
 }
 
 .o-norikovi p:first-child {
     text-indent: 0
+}
+
+.co-padlo-to-padlo {
+    float: right;
+}
+
+p {
+    clear: right;
 }
