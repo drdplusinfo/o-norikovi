@@ -5,6 +5,7 @@ body {
 
 .main {
     max-width: 487px;
+    min-height: calc(100vh - 2em);
     margin: auto;
     position: relative;
     padding: 1em;

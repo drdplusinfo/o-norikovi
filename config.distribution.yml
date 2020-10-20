@@ -6,9 +6,11 @@ web:
   title_smiley: ''
   menu:
     position_fixed: false
-    show_home_button_on_homepage: true
-    show_home_button_on_routes: false
-    home_button_target: 'https://www.drdplus.info'
+    home_button:
+      show_on_gateway: true
+      show_on_homepage: false
+      show_on_routes: false
+      target: 'https://www.drdplus.info'
 google:
   analytics_id: 'UA-121206931-22'
 application:
