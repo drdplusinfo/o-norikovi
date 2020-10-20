@@ -1,15 +1,15 @@
 showPreviousVisitPage = () => {
     const cookies = document.cookie.split('; ')
-    let previousVisitPage = null
+    let previouslyVisitedPage = null
     if (cookies) {
-        const previousVisitPageCookie = cookies.find(row => row.startsWith('previousVisitPage'))
-        if (previousVisitPageCookie) {
-            previousVisitPage = Number.parseInt(previousVisitPageCookie.split('=')[1])
+        const previouslyVisitedPageCookie = cookies.find(row => row.startsWith('previouslyVisitedPage'))
+        if (previouslyVisitedPageCookie) {
+            previouslyVisitedPage = Number.parseInt(previouslyVisitedPageCookie.split('=')[1])
         }
     }
-    if (previousVisitPage) {
+    if (previouslyVisitedPage) {
         const firstPage = Number.parseInt(document.getElementById('new_adventure').href.replace(/^[^0-9]+/, ''))
-        if (previousVisitPage === firstPage) {
+        if (previouslyVisitedPage === firstPage) {
             return
         }
         const continueContainer = document.getElementById('continue_from_previous_visit_page')
@@ -22,7 +22,7 @@ showPreviousVisitPage = () => {
             console.warn("Can not found anchor in element with ID 'continue_from_previous_visit_page_element'")
             return
         }
-        continueAnchor.href = `/${previousVisitPage}`
+        continueAnchor.href = `/${previouslyVisitedPage}`
         continueContainer.classList.remove('hidden')
     }
 }
