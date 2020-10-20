@@ -1,0 +1,7 @@
+expected_public_url: 'https://onorikovi.drdplus.info'
+expected_web_name: 'O Norikovi'
+expected_page_title: 'O Norikovi'
+expected_licence: 'MIT' # TODO proprietary
+expected_google_analytics_id: 'UA-121206931-24'
+has_tables: false
+has_local_links: true
