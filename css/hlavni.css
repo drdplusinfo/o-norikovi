@@ -26,21 +26,21 @@ p {
     clear: right;
 }
 
-.vyhláška {
+.oznámení {
     margin: 1em 0;
     font-family: "vyhláška", "Bookman Old Style", serif;
     text-align: center;
 }
 
-.vyhláška .oslovení {
+.oznámení .oslovení {
     font-size: 1.5em;
 }
 
-.vyhláška .úvod {
+.oznámení .úvod {
     margin-bottom: 1em;
 }
 
-.vyhláška .podpis, .dopsáno-k-vyhlášce .podpis {
+.oznámení .podpis, .dopsáno-k-vyhlášce .podpis {
     text-align: right;
 }
 
@@ -48,5 +48,10 @@ p {
     font-family: "narychlo", "Times New Roman", serif;
     font-style: italic;
     margin: 1em 0;
+    text-align: center;
+}
+
+.konec {
+    margin-top: 1em;
     text-align: center;
 }
