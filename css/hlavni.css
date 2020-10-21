@@ -25,3 +25,28 @@ body {
 p {
     clear: right;
 }
+
+.vyhláška {
+    margin: 1em 0;
+    font-family: "vyhláška", "Bookman Old Style", serif;
+    text-align: center;
+}
+
+.vyhláška .oslovení {
+    font-size: 1.5em;
+}
+
+.vyhláška .úvod {
+    margin-bottom: 1em;
+}
+
+.vyhláška .podpis, .dopsáno-k-vyhlášce .podpis {
+    text-align: right;
+}
+
+.dopsáno-k-vyhlášce {
+    font-family: "narychlo", "Times New Roman", serif;
+    font-style: italic;
+    margin: 1em 0;
+    text-align: center;
+}

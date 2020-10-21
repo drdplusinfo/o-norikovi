@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "vyhláška";
+    src: url("/fonts/Chomsky.woff") format('woff');
+}
+
+@font-face {
+    font-family: "narychlo";
+    src: url("/fonts/skolacekCE.woff") format('woff');
+}
