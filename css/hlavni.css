@@ -19,6 +19,7 @@ body {
 
 .rozcestník {
     float: right;
+    text-indent: 0;
 }
 
 p {
