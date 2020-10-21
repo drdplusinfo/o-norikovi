@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . '/../autori/autoři.html';
+include __DIR__ . '/../autori/autori.html';
 ?>
 
 <div class="za-dobrodružstvím">
