@@ -55,3 +55,12 @@ p {
     margin-top: 1em;
     text-align: center;
 }
+
+.o-norikovi {
+    font-size: 18px;
+}
+
+.o-norikovi p:first-child.první-možnost {
+    text-indent: 15px;
+    margin: 0;
+}
