@@ -1,12 +1,5 @@
-showPreviousVisitPage = () => {
-    const cookies = document.cookie.split('; ')
-    let previouslyVisitedPage = null
-    if (cookies) {
-        const previouslyVisitedPageCookie = cookies.find(row => row.startsWith('previouslyVisitedPage'))
-        if (previouslyVisitedPageCookie) {
-            previouslyVisitedPage = Number.parseInt(previouslyVisitedPageCookie.split('=')[1])
-        }
-    }
+document.addEventListener('DOMContentLoaded', function () {
+    let previouslyVisitedPage = getPreviouslyVisitedPage()
     if (!previouslyVisitedPage) {
         return
     }
@@ -30,6 +23,4 @@ showPreviousVisitPage = () => {
     }
     continueAnchor.href = `/${previouslyVisitedPage}`
     continueContainer.classList.remove('hidden')
-}
-
-showPreviousVisitPage()
+})

@@ -43,3 +43,10 @@
 .cedule .úvod {
     font-variant: small-caps;
 }
+
+.cedule.malá {
+    width: max-content;
+    margin: 1em auto;
+    padding: 0.5em 1em;
+    border-width: 2px;
+}

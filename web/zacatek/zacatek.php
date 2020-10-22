@@ -10,4 +10,4 @@ include __DIR__ . '/../autori/autori.html';
   </div>
 </div>
 
-<script type="text/javascript" src="/js/show-previous-visit-page.js"></script>
+<script type="text/javascript" src="/js/continue-from-previous-page.js"></script>
