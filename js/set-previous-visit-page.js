@@ -1,7 +1,7 @@
 {
-    const previouslyVisitedPage = Number.parseInt(location.pathname.replace(/^[/]/, ''))
-    if (previouslyVisitedPage) {
+    const currentPage = Number.parseInt(location.pathname.replace(/^[/]/, ''))
+    if (currentPage) {
         const somethingLikeYearInSeconds = 31536000
-        document.cookie = "previouslyVisitedPage=" + previouslyVisitedPage + ";max-age=" + somethingLikeYearInSeconds
+        document.cookie = "previouslyVisitedPage=" + currentPage + ";max-age=" + somethingLikeYearInSeconds
     }
 }

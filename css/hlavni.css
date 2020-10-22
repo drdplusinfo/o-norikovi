@@ -2,6 +2,7 @@ body {
     color: #000;
     font-family: "Times New Roman", serif;
     min-height: 100vh;
+    font-size: 18px;
 }
 
 .main {
@@ -13,54 +14,27 @@ body {
     text-align: justify;
 }
 
-.o-norikovi p:first-child {
-    text-indent: 0
-}
-
 .rozcestník {
     float: right;
     text-indent: 0;
+    min-width: 2em;
+    text-align: right;
 }
 
 p {
     clear: right;
 }
 
-.oznámení {
-    margin: 1em 0;
-    font-family: "vyhláška", "Bookman Old Style", serif;
-    text-align: center;
-}
-
-.oznámení .oslovení {
-    font-size: 1.5em;
-}
-
-.oznámení .úvod {
-    margin-bottom: 1em;
-}
-
-.oznámení .podpis, .dopsáno-k-vyhlášce .podpis {
-    text-align: right;
-}
-
-.dopsáno-k-vyhlášce {
-    font-family: "narychlo", "Times New Roman", serif;
-    font-style: italic;
-    margin: 1em 0;
-    text-align: center;
-}
-
-.konec {
-    margin-top: 1em;
-    text-align: center;
-}
-
-.o-norikovi {
-    font-size: 18px;
+.o-norikovi p:first-child {
+    text-indent: 0
 }
 
 .o-norikovi p:first-child.první-možnost {
     text-indent: 15px;
     margin: 0;
+}
+
+.konec {
+    margin-top: 1em;
+    text-align: center;
 }
