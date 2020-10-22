@@ -9,7 +9,7 @@
 
 .oznámení {
     margin: 1em 0;
-    font-family: "vyhláška", "Bookman Old Style", serif;
+    font-family: "oznámení", "Bookman Old Style", serif;
     text-align: center;
 }
 
@@ -21,13 +21,25 @@
     margin-bottom: 1em;
 }
 
-.oznámení .podpis, .dopsáno-k-vyhlášce .podpis {
+.oznámení .podpis, .dopsáno-k-oznámení .podpis {
     text-align: right;
 }
 
-.dopsáno-k-vyhlášce {
+.dopsáno-k-oznámení {
     font-family: "narychlo", "Times New Roman", serif;
     font-style: italic;
     margin: 1em 0;
     text-align: center;
+}
+
+.cedule {
+    margin: 1em 0.5em;
+    letter-spacing: 0;
+    font-size: 15px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.cedule .úvod {
+    font-variant: small-caps;
 }
