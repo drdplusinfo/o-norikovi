@@ -24,9 +24,12 @@ getPreviouslyPreviouslyVisitedPage = () => {
 }
 
 setPreviouslyVisitedPage = () => {
+    const previouslyVisitedPage = getPreviouslyVisitedPage()
     const currentPage = Number.parseInt(location.pathname.replace(/^[/]/, ''))
     if (currentPage) {
-        const previouslyVisitedPage = getPreviouslyVisitedPage()
+        if (currentPage === previouslyVisitedPage) {
+            return
+        }
         const somethingLikeYearInSeconds = 31536000
         document.cookie = "previouslyVisitedPage=" + currentPage + ";max-age=" + somethingLikeYearInSeconds
         if (previouslyVisitedPage !== currentPage) {
