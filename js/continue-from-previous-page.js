@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     let previouslyVisitedPage = getLastPage()
     if (!previouslyVisitedPage) {
+        previouslyVisitedPage = getPreviouslyVisitedPage() // backward compatibility after cookies renaming
+    }
+    if (!previouslyVisitedPage) {
         return
     }
     const newAdventureElement = document.getElementById('new_adventure')
