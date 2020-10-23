@@ -15,51 +15,50 @@ getNumericCookie = (name) => {
     return value
 }
 
+getLastPage = () => {
+    return getNumericCookie('lastVisitedPage')
+}
+
 getPreviouslyVisitedPage = () => {
     return getNumericCookie('previouslyVisitedPage')
 }
 
-getPreviouslyPreviouslyVisitedPage = () => {
-    return getNumericCookie('previouslyPreviouslyVisitedPage')
-}
-
-setPreviouslyVisitedPage = () => {
-    const previouslyVisitedPage = getPreviouslyVisitedPage()
+setLastVisitedPage = () => {
+    const previouslyVisitedPage = getLastPage()
     const currentPage = Number.parseInt(location.pathname.replace(/^[/]/, ''))
     if (currentPage) {
         if (currentPage === previouslyVisitedPage) {
             return
         }
         const somethingLikeYearInSeconds = 31536000
-        document.cookie = "previouslyVisitedPage=" + currentPage + ";max-age=" + somethingLikeYearInSeconds
+        document.cookie = "lastVisitedPage=" + currentPage + ";max-age=" + somethingLikeYearInSeconds
         if (previouslyVisitedPage !== currentPage) {
-            document.cookie = "previouslyPreviouslyVisitedPage=" + previouslyVisitedPage + ";max-age=" + somethingLikeYearInSeconds
+            document.cookie = "previouslyVisitedPage=" + previouslyVisitedPage + ";max-age=" + somethingLikeYearInSeconds
         }
     }
 }
 
-setPreviouslyVisitedPage()
+setLastVisitedPage()
 
 document.addEventListener('DOMContentLoaded', function () {
     const previousPageNode = document.getElementById('previous_page')
     if (!previousPageNode) {
         return
     }
-    const previouslyPreviouslyVisitedPage = getPreviouslyPreviouslyVisitedPage()
-    if (!previouslyPreviouslyVisitedPage) {
+    const previouslyVisitedPage = getPreviouslyVisitedPage()
+    if (!previouslyVisitedPage) {
         return
     }
     const anchor = document.createElement('a')
-    anchor.setAttribute('href', '../' + previouslyPreviouslyVisitedPage)
+    anchor.setAttribute('href', '../' + previouslyVisitedPage)
 
     const bold = document.createElement('b')
-    bold.innerText = previouslyPreviouslyVisitedPage
+    bold.innerText = previouslyVisitedPage
     anchor.appendChild(bold)
 
     const space = document.createTextNode(' ')
     previousPageNode.appendChild(space)
 
     previousPageNode.appendChild(anchor)
-    // previousPageNode.textContent = previousPageNode.innerText.replace('%previousPage%', previouslyPreviouslyVisitedPage)
     previousPageNode.classList.remove('hidden')
 })

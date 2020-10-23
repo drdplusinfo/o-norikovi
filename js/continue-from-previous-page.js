@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let previouslyVisitedPage = getPreviouslyVisitedPage()
+    let previouslyVisitedPage = getLastPage()
     if (!previouslyVisitedPage) {
         return
     }
