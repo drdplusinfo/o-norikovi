@@ -50,3 +50,9 @@
     padding: 0.5em 1em;
     border-width: 2px;
 }
+
+.doklad {
+    font-style: italic;
+    text-align: center;
+    margin: 1em 0;
+}
