@@ -30,6 +30,7 @@
     font-style: italic;
     margin: 1em 0;
     text-align: center;
+    transform: rotate(1.2deg);
 }
 
 .cedule {
@@ -55,4 +56,14 @@
     font-style: italic;
     text-align: center;
     margin: 1em 0;
+}
+
+.nakřivo-nahoru {
+    margin: 2px 0;
+    transform: rotate(-0.5deg);
+}
+
+.nakřivo-dolů {
+    margin: 2px 0;
+    transform: rotate(0.5deg);
 }

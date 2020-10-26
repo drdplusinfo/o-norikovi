@@ -24,7 +24,7 @@ body {
 }
 
 .background-image {
-    background: url(/images/main-background.png?version=b8932f1ade33512d6e6200f62c95afde) no-repeat top;
+    background: url(/images/licence-background.png?version=b8932f1ade33512d6e6200f62c95afde) no-repeat top;
     background-size: cover;
     position: fixed;
     top: 0;
