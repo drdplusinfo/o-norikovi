@@ -8,6 +8,10 @@
     max-width: 60%;
 }
 
+.velmi-malý-obrázek {
+    max-width: 40%;
+}
+
 .obrázek-uprostřed {
     margin-top: 1em;
     margin-bottom: 1em;
