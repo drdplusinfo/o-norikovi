@@ -18,7 +18,8 @@
   },
   "require": {
     "php": ">=7.1",
-    "drdplus/rules-skeleton": "dev-master"
+    "drdplus/rules-skeleton": "dev-master",
+    "granam/integer": "^7.0"
   },
   "require-dev": {
     "composer/composer": "^1.10",

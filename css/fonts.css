@@ -1,9 +1,9 @@
 @font-face {
     font-family: "oznámení";
-    src: url("/fonts/Chomsky.woff") format('woff');
+    src: url("/fonts/Chomsky.woff?version=29632d49c5a0b6a9a8a01ce3c2bf38ac") format('woff');
 }
 
 @font-face {
     font-family: "narychlo";
-    src: url("/fonts/skolacekCE.woff") format('woff');
+    src: url("/fonts/skolacekCE.woff?version=2c62405e651855a02209369fab885cf9") format('woff');
 }
