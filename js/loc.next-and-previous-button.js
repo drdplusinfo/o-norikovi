@@ -38,7 +38,6 @@
                     document.getElementById('toPreviousPage').click()
                 }
             })
-
         })
     }
 }
