@@ -32,9 +32,9 @@
             document.body.appendChild(previousPageAnchor)
 
             document.addEventListener("keydown", event => {
-                if (event.code === 'ArrowRight') {
+                if (event.code === 'ArrowRight' || event.code === 'KeyD') {
                     document.getElementById('toNextPage').click()
-                } else if (event.code === 'ArrowLeft') {
+                } else if (event.code === 'ArrowLeft' || event.code === 'KeyA') {
                     document.getElementById('toPreviousPage').click()
                 }
             })

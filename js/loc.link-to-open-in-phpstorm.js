@@ -24,7 +24,7 @@
             document.body.getElementsByClassName('main')[0].appendChild(wrappingDiv)
 
             document.addEventListener("keydown", event => {
-                if (event.code === 'KeyO') {
+                if (event.code === 'KeyO' || event.code === 'KeyE') {
                     document.getElementById('openLink').click()
                 }
             })
