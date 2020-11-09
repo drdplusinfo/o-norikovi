@@ -19,6 +19,7 @@ body {
     text-indent: 0;
     min-width: 2em;
     text-align: right;
+    font-weight: bold;
 }
 
 p {
